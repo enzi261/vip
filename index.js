@@ -1,6 +1,6 @@
 const express = require('express');
 const getToken = require('./token');
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 app.use(express.static('public'));
@@ -20,4 +20,4 @@ app.get('/auth', (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`copy link ini di browser http://localhost:80 `));
+app.listen(PORT, () => console.log(`copy link ini di browser http://localhost:5000 `));
