@@ -20,4 +20,4 @@ app.get('/auth', (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`copy link ini untuk Mengambil token http://localhost:5000 `));
+app.listen(PORT, () => console.log(`copy link ini di browser http://localhost:5000 `));
