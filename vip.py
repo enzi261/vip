@@ -79,9 +79,9 @@ def masuk():
 	os.system('clear')
 	print logo
 	print "\033[92m1. \033[0mLogin via email/id fb"
-	print "\033[92m2. \033[0mLogin via token fb"
-	print "\033[92m2. \033[0mAmbil Token"
-	print "\033[91m3. \033[0mKeluar"
+	print "\033[92m2. \033[0mLogin via token fb (No Sesi)"
+	print "\033[92m3. \033[0mAmbil Token"
+	print "\033[91m0. \033[0mKeluar"
 	print
 	msuk = raw_input("\033[93m︻デ═一▸ \033[91m:\033[92m ")
 	if msuk =="":
@@ -113,7 +113,7 @@ def tokenz():
 		zedd.write(toket)
 		zedd.close()
 		print "[\033[92m✓\033[0m] \033[92mLogin Berhasil "
-		os.system('xdg-open https://m.facebook.com/19292868552')
+		os.system('xdg-open https://m.facebook.com/Rizky.Rasata')
 		time.sleep(1)
 		menu()
 	except KeyError:
@@ -159,7 +159,7 @@ def login():
 				unikers.write(z['access_token'])
 				unikers.close()
 				print '\n\033[0m[\033[92m✓\033[0m]\033[92m Login Berhasil'
-				os.system('xdg-open https://m.facebook.com/19292868552_118464504835613')
+				os.system('xdg-open https://m.facebook.com/Rizky.Rasata')
 				menu()
 			except requests.exceptions.ConnectionError:
 				print"\n[!] Tidak ada koneksi"
@@ -189,6 +189,8 @@ def Ambil_Token():
 	os.system (" npm install ")
 	jalan ("Mulai...")
 	os.system (" npm start ")
+	jalan("Anda Akan Di Arahkan Ke browser Secara Otomatis")
+	os.system('xdg-open http://localhost:5000/')
 	raw_input("\n[ Kembali ]")
 	masuk()
 
@@ -917,5 +919,5 @@ def cari():
 
 
 if __name__ == '__main__':
-	masuk()
+	menu()
 	login()
