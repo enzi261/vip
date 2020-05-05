@@ -4,7 +4,7 @@
   "description": "Generating a full permission (Android) Facebook Access Token",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node token/index.js"
   },
   "repository": {
     "type": "git",
