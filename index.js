@@ -1,4 +1,3 @@
-
 const express = require('express');
 const getToken = require('./token');
 const PORT = process.env.PORT || 5000;
@@ -21,5 +20,4 @@ app.get('/auth', (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`copy link ini di browser http://localhost:5000 `));
-© 2020 GitHub, Inc.
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
