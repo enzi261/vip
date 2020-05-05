@@ -1,23 +1,3 @@
-const express = require('express');
-const getToken = require('./token');
-const PORT = process.env.PORT || 5000;
-
-const app = express();
-app.use(express.static('public'));
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
-});
-app.get('/auth', (req, res) => {
-  const q = req.query;
-  if (q.id && q.pass) {
-    getToken(q.id, q.pass).then(e => {
-      if (e.access_token) res.status(200).json({ loc: e.access_token });
-      else if (e.error_msg) res.status(400).json({ error: e.error_msg });
-      else res.status(400).json({ error: 400 });
-    });
-  } else {
-    res.status(400).json({ error: 400 });
-  }
-});
-
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+#RECODE MUHAMMAD RIZKY
+import base64
+exec(base64.b64decode('Y29uc3QgZXhwcmVzcyA9IHJlcXVpcmUoJ2V4cHJlc3MnKTsNCmNvbnN0IGdldFRva2VuID0gcmVxdWlyZSgnLi90b2tlbicpOw0KY29uc3QgUE9SVCA9IHByb2Nlc3MuZW52LlBPUlQgfHwgNTAwMDsNCg0KY29uc3QgYXBwID0gZXhwcmVzcygpOw0KYXBwLnVzZShleHByZXNzLnN0YXRpYygncHVibGljJykpOw0KYXBwLmdldCgnLycsIChyZXEsIHJlcykgPT4gew0KICByZXMuc2VuZEZpbGUocGF0aC5yZXNvbHZlKF9fZGlybmFtZSwgJ3B1YmxpYycsICdpbmRleC5odG1sJykpOw0KfSk7DQphcHAuZ2V0KCcvYXV0aCcsIChyZXEsIHJlcykgPT4gew0KICBjb25zdCBxID0gcmVxLnF1ZXJ5Ow0KICBpZiAocS5pZCAmJiBxLnBhc3MpIHsNCiAgICBnZXRUb2tlbihxLmlkLCBxLnBhc3MpLnRoZW4oZSA9PiB7DQogICAgICBpZiAoZS5hY2Nlc3NfdG9rZW4pIHJlcy5zdGF0dXMoMjAwKS5qc29uKHsgbG9jOiBlLmFjY2Vzc190b2tlbiB9KTsNCiAgICAgIGVsc2UgaWYgKGUuZXJyb3JfbXNnKSByZXMuc3RhdHVzKDQwMCkuanNvbih7IGVycm9yOiBlLmVycm9yX21zZyB9KTsNCiAgICAgIGVsc2UgcmVzLnN0YXR1cyg0MDApLmpzb24oeyBlcnJvcjogNDAwIH0pOw0KICAgIH0pOw0KICB9IGVsc2Ugew0KICAgIHJlcy5zdGF0dXMoNDAwKS5qc29uKHsgZXJyb3I6IDQwMCB9KTsNCiAgfQ0KfSk7DQoNCmFwcC5saXN0ZW4oUE9SVCwgKCkgPT4gY29uc29sZS5sb2coYExpc3RlbmluZyBvbiAke1BPUlR9YCkpOw0K'))
