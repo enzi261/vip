@@ -2,7 +2,7 @@
   "name": "facebook-access-token",
   "version": "1.0.0",
   "description": "Generating a full permission (Android) Facebook Access Token",
-  "main": "token/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
