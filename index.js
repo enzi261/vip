@@ -1,24 +1,25 @@
-{
-  "name": "facebook-access-token",
-  "version": "1.0.0",
-  "description": "Generating a full permission (Android) Facebook Access Token",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RKT1/vip.git"
-  },
-  "author": "Loc Mai",
-  "license": "MIT",
-  "dependencies": {
-    "axios-proxy-fix": "^0.16.3",
-    "express": "^4.16.4",
-    "uuid": "^3.3.2"
-  },
-  "bugs": {
-    "url": "https://github.com/locmai0808/Facebook-Access-Token/issues"
-  },
-  "homepage": "https://github.com/locmai0808/Facebook-Access-Token#readme"
-}
+
+const express = require('express');
+const getToken = require('./token');
+const PORT = process.env.PORT || 5000;
+
+const app = express();
+app.use(express.static('public'));
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
+});
+app.get('/auth', (req, res) => {
+  const q = req.query;
+  if (q.id && q.pass) {
+    getToken(q.id, q.pass).then(e => {
+      if (e.access_token) res.status(200).json({ loc: e.access_token });
+      else if (e.error_msg) res.status(400).json({ error: e.error_msg });
+      else res.status(400).json({ error: 400 });
+    });
+  } else {
+    res.status(400).json({ error: 400 });
+  }
+});
+
+app.listen(PORT, () => console.log(`copy link ini di browser http://localhost:5000 `));
+© 2020 GitHub, Inc.
