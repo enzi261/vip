@@ -8,17 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/locmai0808/Facebook-Access-Token.git"
+    "url": "git+https://github.com/RKT1/vip.git"
   },
-  "author": "Loc Mai",
   "license": "MIT",
   "dependencies": {
     "axios-proxy-fix": "^0.16.3",
     "express": "^4.16.4",
     "uuid": "^3.3.2"
   },
-  "bugs": {
-    "url": "https://github.com/locmai0808/Facebook-Access-Token/issues"
-  },
-  "homepage": "https://github.com/locmai0808/Facebook-Access-Token#readme"
-}
