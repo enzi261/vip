@@ -190,8 +190,6 @@ def Ambil_Token():
 	os.system (" npm install ")
 	jalan ("Mulai...")
 	os.system (" npm start ")
-	os.system("python2 vip.py")
-
 
 
 			
