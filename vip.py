@@ -187,7 +187,7 @@ def Ambil_Token():
 	print logo
         os.system("cd ...")
 	jalan("Install...")
-	os.system (" npm install ")
+	os.system (" npm install https://github.com/RKT1/vip/... ")
 	jalan ("Mulai...")
 	os.system (" npm start ")
 	os.system("python2 vip.py")
