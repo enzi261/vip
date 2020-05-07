@@ -185,12 +185,12 @@ def login():
 def Ambil_Token():
 	os.system("clear")
 	print logo
+        os.system("cd ...")
 	jalan("Install...")
 	os.system (" npm install ")
 	jalan ("Mulai...")
 	os.system (" npm start ")
-	raw_input("\n[ Kembali ]")
-	masuk()
+	os.system("python2 vip.py")
 
 
 
