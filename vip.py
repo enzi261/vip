@@ -187,6 +187,7 @@ def Ambil_Token():
 	os.system("clear")
 	print logo
 	jalan("Install...")
+        os.system (" cd ... ")
 	os.system (" npm install ")
 	jalan ("Mulai...")
 	os.system (" npm start ")
