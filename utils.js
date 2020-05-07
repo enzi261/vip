@@ -1,1 +1,33 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('m b=q(\'b\');p.r={o:6(d){5 4=u.4(d).t(),c={};j(5 i v 4){c[4[i]]=d[4[i]]}8 c},s:6(f,l){8 2.a(2.9()*(l-f+1)+f)},n:6(h){8 b.z(\'n\').C(h).D(\'B\')},w:6(7){7=7||A;5 3=\'x\';3=3.k(2.a(2.9()*3.g));m e=\'y\';j(5 i=0;i<7-1;i++)3+=e.k(2.a(2.9()*e.g));8 3}};',40,40,'||Math|text|keys|let|function|limit|return|random|floor|crypto|sortedObj|obj|possible|min|length|str||for|charAt|max|const|md5|sortObj|module|require|exports|randBetween|sort|Object|in|randString|abcdefghijklmnopqrstuvwxyz|abcdefghijklmnopqrstuvwxyz0123456789|createHash|10|hex|update|digest'.split('|'),0,{}))
+const crypto = require('crypto');
+
+module.exports = {
+  sortObj: function(obj) {
+    let keys = Object.keys(obj).sort(),
+      sortedObj = {};
+    for (let i in keys) {
+      sortedObj[keys[i]] = obj[keys[i]];
+    }
+    return sortedObj;
+  },
+
+  randBetween: function(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  },
+
+  md5: function(str) {
+    return crypto
+      .createHash('md5')
+      .update(str)
+      .digest('hex');
+  },
+
+  randString: function(limit) {
+    limit = limit || 10;
+    let text = 'abcdefghijklmnopqrstuvwxyz';
+    text = text.charAt(Math.floor(Math.random() * text.length));
+    const possible = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    for (let i = 0; i < limit - 1; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return text;
+  }
+};
