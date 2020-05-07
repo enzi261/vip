@@ -919,3 +919,17 @@ def cari():
 if __name__ == '__main__':
 	menu()
 	login()
+################################
+
+
+
+import json
+
+# buka file JSON-nya dulu
+file_json = open('petanikode.json')
+
+# load file JSON dari file yang sudah dibuka
+data = json.loads(file_json.read())
+
+# cetak isi data
+print data
