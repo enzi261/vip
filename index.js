@@ -20,4 +20,4 @@ app.get('/auth', (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`open this link in your browser  http://localhost:5000`));
+app.listen(PORT, () => console.log(`copy link di browser : http://localhost:5000 `));
