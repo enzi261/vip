@@ -229,7 +229,7 @@ def menu():
 	print "\033[92m2.\033[0m Crack id bangladesh "
 	print "\033[92m3.\033[0m Crack id usa "
 	print "\033[92m4.\033[0m Profile guard "
-	print "\033[92m5.\033[0m Update tools "
+	print "\033[92m5.\033[0m Ikuti saya di facebook "
 	print "\033[91m0.\033[0m Logout            \n"
 	pilih()
 	
@@ -248,7 +248,7 @@ def pilih():
 	elif unikers =="4":
 		guard()
 	elif unikers =="5":
-		update()
+		saya()
 	elif unikers =="0":
 		os.system('clear')
 		jalan('Menghapus token')
@@ -846,9 +846,9 @@ def guard():
 	elif g =="0":
 		menu()
 	elif g =="":
-		keluar()
+		guard()
 	else:
-		keluar()
+		guard()
 	
 def get_userid(toket):
 	url = "https://graph.facebook.com/me?access_token=%s"%toket
@@ -879,16 +879,14 @@ def gaz(toket, enable = True):
 		print "\033[91m[!] Error"
 		keluar()
 		
-
-
-def update():
-	os.system("clear")
+		
+		
+def saya():
+	os.system ('clear')
 	print logo
-	os.system ("cd /data/data/com.termux/files/home")
-	os.system ("rm -rf vip")
-	print ("\033[92mMengupdate Tools ...")
-	os.system ("git clone https://github.com/RKT1/vip")
-	os.system ("cd vip && python2 vip.py")
+	jalan ('          \033[92mAnda Akan Di Arahkan Ke Browser')
+	os.system('xdg-open https://m.facebook.com/Rizky.Rasata')
+	menu()
 		
 
 
