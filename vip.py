@@ -189,7 +189,7 @@ def Ambil_Token():
 	jalan("Install...")
         os.system ("cd ... && npm install")
 	jalan ("Mulai...")
-	os.system (" npm start ")
+	os.system ("cd ... && npm start")
 	raw_input("\n[ Kembali ]")
 	masuk()
 
