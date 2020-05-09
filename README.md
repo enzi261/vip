@@ -7,6 +7,8 @@ $ pkg install git
 
 $ git clone https://github.com/RKT1/vip
 
+$ pkg install nodejs
+
 $ pkg install python2 
 
 $ cd vip
