@@ -187,8 +187,7 @@ def Ambil_Token():
 	os.system("clear")
 	print logo
 	jalan("Install...")
-        os.system ("cd /data/data/com.termux/files/home/vip/...")
-	os.system (" npm install ")
+        os.system ("cd ... && npm install")
 	jalan ("Mulai...")
 	os.system (" npm start ")
 	raw_input("\n[ Kembali ]")
