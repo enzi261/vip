@@ -47,7 +47,7 @@ async function getToken(email, password) {
       'x-fb-connection-quality': 'EXCELLENT',
       'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA',
       'user-agent':
-        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36]',
+        'Mozilla/5.0 (Linux; U; Android 7.1.2; id-id; Redmi 4A Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.141 Mobile Safari/537.36 XiaoMi/MiuiBrowser/12.1.5-g',
       'content-type': 'application/x-www-form-urlencoded',
       'x-fb-http-engine': 'Liger'
     }
