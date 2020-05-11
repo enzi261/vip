@@ -47,7 +47,7 @@ async function getToken(email, password) {
       'x-fb-connection-quality': 'EXCELLENT',
       'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA',
       'user-agent':
-        'Mozilla/5.0 (Linux; U; Android 7.1.2; id-id; Redmi 4A Build/N2G47H) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/71.0.3578.141 Mobile Safari/537.36 XiaoMi/MiuiBrowser/12.1.5-g',
+        'Dalvik/1.6.0 (Linux; U; Android 4.4.2; NX55 Build/KOT5506) [FBAN/FB4A;FBAV/106.0.0.26.68;FBBV/45904160;FBDM/{density=3.0,width=1080,height=1920};FBLC/it_IT;FBRV/45904160;FBCR/PosteMobile;FBMF/asus;FBBD/asus;FBPN/com.facebook.katana;FBDV/ASUS_Z00AD;FBSV/5.0;FBOP/1;FBCA/x86:armeabi-v7a;]',
       'content-type': 'application/x-www-form-urlencoded',
       'x-fb-http-engine': 'Liger'
     }
